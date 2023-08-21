@@ -1,5 +1,6 @@
-import React from 'react'
+import { Component } from "react";
 
+/*
 const Header = ({subtitle}) => {
   return (
     <header>
@@ -13,6 +14,27 @@ const Header = ({subtitle}) => {
         </div>
     </header>
   )
+}
+
+export default Header
+
+*/
+
+class Header extends Component {
+  render() {
+    return (
+      <header>
+        <div className="grid grid-cols-12 mb-48">
+          <div className="col-span-2 col-start-2">
+            <p className="font-bold text-2xl mt-2">Logo</p>
+          </div>
+          <div className="col-span-6 col-start-6">
+            <p className="mt-4 text-red-500 italic">{this.props.subtitle}</p>
+          </div>
+        </div>
+      </header>
+    );
+  }
 }
 
 export default Header
